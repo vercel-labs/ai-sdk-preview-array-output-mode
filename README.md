@@ -22,8 +22,6 @@ OPENAI_API_KEY=sk-...
 ```
 
 Finally, run the development server:
-```
-
 ```bash
 pnpm dev
 ```
