@@ -72,11 +72,13 @@ export function SearchInterface() {
             {outputMode === "array" &&
               contactsArray &&
               contactsArray.map((vacation, i) => (
+                // @ts-ignore
                 <VacationCard key={i} vacation={vacation} />
               ))}
             {outputMode === "object" &&
               contactsObject &&
               contactsObject.contacts?.map((contact, i) => (
+                // @ts-ignore
                 <VacationCard key={i} vacation={contact} />
               ))}
           </div>
