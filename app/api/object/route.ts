@@ -7,7 +7,7 @@ export async function POST() {
     schema: vacationSchemaObject,
     output: "object",
     model: openai("gpt-4o-mini"),
-    prompt: "Generate 8 vacation destinations",
+    prompt: "Generate 3 vacation destinations",
   });
 
   return result.toTextStreamResponse();

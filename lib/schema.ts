@@ -17,7 +17,7 @@ export const vacationSchema = z.object({
   ]),
   description: z.string(),
   tags: z.array(z.string()),
-  activities: z.array(z.string()),
+  activities: z.array(z.string().describe("max two words")),
 });
 
 export const vacationsSchema = z.array(vacationSchema);
