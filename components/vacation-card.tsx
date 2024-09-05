@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -20,29 +19,10 @@ import {
   FileQuestion,
   MapPin,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-
-type VacationType = {
-  location?: string;
-  country?: string;
-  climate?:
-    | "tropical"
-    | "arid"
-    | "temperate"
-    | "polar"
-    | "mediterranean"
-    | "subtropical"
-    | "alpine"
-    | "coastal"
-    | "rainforest"
-    | "desert";
-  description?: string;
-  tags?: string[];
-  activities?: string[];
-  photo?: string;
-};
+import { DeepPartial } from "ai";
+import { Vacation } from "@/lib/schema";
 
 const climateConfig = {
   tropical: { icon: Palmtree, color: "text-orange-400" },
@@ -61,7 +41,7 @@ const climateConfig = {
 export function VacationCard({
   vacation,
 }: {
-  vacation: VacationType | undefined;
+  vacation: DeepPartial<Vacation> | undefined;
 }) {
   const { icon: ClimateIcon, color } =
     climateConfig[

@@ -5,7 +5,6 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { experimental_useObject as useObject } from "ai/react";
 import { vacationsSchema, vacationSchemaObject } from "@/lib/schema";
 import { useState } from "react";
-import ProjectOverview from "./project-overview";
 import { VacationCard } from "./vacation-card";
 
 export function SearchInterface() {
@@ -13,7 +12,6 @@ export function SearchInterface() {
   const {
     object: contactsArray,
     submit: submitArray,
-    stop: stopArray,
     isLoading: isLoadingArray,
   } = useObject({
     api: "/api/array",
@@ -23,7 +21,6 @@ export function SearchInterface() {
   const {
     object: contactsObject,
     submit: submitObject,
-    stop: stopObject,
     isLoading: isLoadingObject,
   } = useObject({
     api: "/api/object",
@@ -62,23 +59,15 @@ export function SearchInterface() {
               </Button>
             </div>
           </div>
-
-          {/* {contactsArray == null && contactsObject == null && ( */}
-          {/*   <div className="w-full"> */}
-          {/*     <ProjectOverview /> */}
-          {/*   </div> */}
-          {/* )} */}
           <div className="grid grid-cols-3 xl:grid-cols-4 gap-4">
             {outputMode === "array" &&
               contactsArray &&
               contactsArray.map((vacation, i) => (
-                // @ts-ignore
                 <VacationCard key={i} vacation={vacation} />
               ))}
             {outputMode === "object" &&
               contactsObject &&
               contactsObject.contacts?.map((contact, i) => (
-                // @ts-ignore
                 <VacationCard key={i} vacation={contact} />
               ))}
           </div>

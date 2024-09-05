@@ -22,3 +22,5 @@ export const vacationSchema = z.object({
 
 export const vacationsSchema = z.array(vacationSchema);
 export const vacationSchemaObject = z.object({ contacts: vacationsSchema });
+
+export type Vacation = z.infer<typeof vacationSchema>;
