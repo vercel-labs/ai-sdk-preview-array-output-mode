@@ -6,7 +6,7 @@ import { MasonryIcon, VercelIcon } from "./icons";
 const ProjectOverview = () => {
   return (
     <motion.div className="px-4 w-full col-span-1 sm:col-span-2 md:col-span-3 md:px-0 pt-20">
-      <div className="border rounded-lg p-6 flex flex-col gap-4 text-neutral-500 text-sm dark:text-neutral-400 border-neutral-700">
+      <div className="border rounded-lg p-6 flex flex-col gap-4 text-neutral-300 text-sm border-neutral-700">
         <p className="flex flex-row justify-center gap-4 items-center text-neutral-50">
           <VercelIcon size={16} />
           <span>+</span>
