@@ -1,6 +1,6 @@
 # Structured Object Generation Array Mode
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnicoalbanese%2Fstructured-object-generation-array-mode&env=OPENAI_API_KEY)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fstructured-object-generation-array-mode&env=OPENAI_API_KEY)
 
 This is a Next.js project that uses the the [`streamObject`](https://sdk.vercel.ai/docs/reference/ai-sdk-core/stream-object) function from the Vercel AI SDK to stream structured objects. This project showcases the new [output mode](https://sdk.vercel.ai/docs/ai-sdk-core/generating-structured-data#output-strategy-array) which allows you to stream structured objects by complete object rather than by token. This solves layout shift issues common to AI applications using structured object generation.
 
@@ -8,11 +8,11 @@ This is a Next.js project that uses the the [`streamObject`](https://sdk.vercel.
 
 First, clone the repository:
 ```bash
-git clone https://github.com/nicoalbanese/structured-object-generation-array-mode.git
+git clone https://github.com/vercel-labs/structured-object-generation-array-mode.git
 ```
 
 Then, install the dependencies:
-```bash 
+```bash
 pnpm install
 ```
 
