@@ -15,7 +15,7 @@ const ProjectOverview = () => {
         <p className="text-center">
           Use{" "}
           <Link
-            className="text-blue-500 dark:text-blue-400"
+            className="text-blue-400"
             href="https://sdk.vercel.ai/docs/ai-sdk-core/generating-structured-data#array"
             target="_blank"
           >
@@ -23,7 +23,7 @@ const ProjectOverview = () => {
           </Link>{" "}
           with the{" "}
           <Link
-            className="text-blue-500 dark:text-blue-400"
+            className="text-blue-400"
             href="https://sdk.vercel.ai"
             target="_blank"
           >
@@ -31,7 +31,7 @@ const ProjectOverview = () => {
           </Link>{" "}
           and{" "}
           <Link
-            className="text-blue-500 dark:text-blue-400"
+            className="text-blue-400"
             href="https://sdk.vercel.ai/docs/reference/ai-sdk-ui/use-object"
             target="_blank"
           >
