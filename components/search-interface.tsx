@@ -6,6 +6,7 @@ import { experimental_useObject as useObject } from "ai/react";
 import { vacationsSchema, vacationSchemaObject } from "@/lib/schema";
 import { useState } from "react";
 import { VacationCard } from "./vacation-card";
+import ProjectOverview from "./project-overview";
 
 export function SearchInterface() {
   const [outputMode, setOutputMode] = useState("array");
@@ -30,7 +31,7 @@ export function SearchInterface() {
   const isLoading = isLoadingArray || isLoadingObject;
 
   return (
-    <div className="min-h-screen bg-neutral-900 text-foreground pt-12">
+    <div className="min-h-screen bg-neutral-900 text-foreground pt-12 max-w-5xl mx-auto">
       <div className="px-8">
         <div className="w-full mx-auto space-y-8">
           <div className="space-y-4">
@@ -59,7 +60,7 @@ export function SearchInterface() {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {outputMode === "array" &&
               contactsArray &&
               contactsArray.map((vacation, i) => (
@@ -70,6 +71,7 @@ export function SearchInterface() {
               contactsObject.contacts?.map((contact, i) => (
                 <VacationCard key={i} vacation={contact} />
               ))}
+            {!contactsArray && !contactsObject && <ProjectOverview />}
           </div>
         </div>
       </div>

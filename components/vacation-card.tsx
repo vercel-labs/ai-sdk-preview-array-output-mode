@@ -51,7 +51,7 @@ export function VacationCard({
   return (
     <div className="">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        <Card className="w-full max-w-md border max-h-[28rem] min-h-[24rem] flex flex-col shadow-lg bg-neutral-800 border-neutral-700 transition-colors duration-200">
+        <Card className="w-full border max-h-[28rem] min-h-[24rem] flex flex-col shadow-lg bg-neutral-800 border-neutral-700 transition-colors duration-200">
           <CardHeader className="border-b bg-neutral-800 border-neutral-700 transition-colors duration-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
