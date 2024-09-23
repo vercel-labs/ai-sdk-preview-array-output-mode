@@ -95,7 +95,7 @@ export function SearchInterface() {
 
         <Link
           target="_blank"
-          href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-array-output-mode&env=OPENAI_API_KEY&envDescription=OpenAI%20API%20Key%20Needed&envLink=https%3A%2F%2Fplatform.openai.com"
+          href="https://vercel.com/templates/next.js/array-output-mode"
           className="flex flex-row gap-2 items-center px-2 py-1.5 rounded-md   bg-zinc-100 text-zinc-900 hover:bg-zinc-50"
         >
           <VercelIcon size={14} />
