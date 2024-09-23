@@ -35,7 +35,7 @@ export function SearchInterface() {
 
   return (
     <div className="min-h-screen bg-neutral-900 text-foreground pt-12 max-w-5xl mx-auto flex justify-center">
-      <div className="px-8">
+      <div className="px-8 w-full">
         <div className="w-full mx-auto space-y-8">
           <div className="space-y-4">
             <div className="flex space-x-2">
