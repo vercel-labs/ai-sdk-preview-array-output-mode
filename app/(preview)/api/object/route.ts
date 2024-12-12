@@ -3,7 +3,7 @@ import { openai } from "@ai-sdk/openai";
 import { streamObject } from "ai";
 
 export async function POST() {
-  const result = await streamObject({
+  const result = streamObject({
     schema: vacationSchemaObject,
     output: "object",
     model: openai("gpt-4o-mini"),
