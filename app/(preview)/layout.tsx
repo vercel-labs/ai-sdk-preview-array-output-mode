@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { BotIdClient } from "botid/client";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const protectedRoutes = [
+  { path: "/api/object", method: "POST" },
+  { path: "/api/array", method: "POST" },
+];
 
 export const metadata: Metadata = {
   title: "Array Output Mode - AI SDK",
@@ -16,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <BotIdClient protect={protectedRoutes} />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

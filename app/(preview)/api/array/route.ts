@@ -1,12 +1,20 @@
 import { streamObject } from "ai";
-import { openai } from "@ai-sdk/openai";
+import { createGateway } from "@ai-sdk/gateway";
 import { vacationSchema } from "@/lib/schema";
+import { checkBotId } from "botid/server";
+
+const gateway = createGateway();
 
 export async function POST() {
+  const { isBot } = await checkBotId();
+  if (isBot) {
+    return new Response("Access denied", { status: 403 });
+  }
+
   const result = await streamObject({
     schema: vacationSchema,
     output: "array",
-    model: openai("gpt-4o-mini"),
+    model: gateway("openai/gpt-4o-mini"),
     prompt: "Generate 3 vacation destinations",
   });
 

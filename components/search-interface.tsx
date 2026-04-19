@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { experimental_useObject as useObject } from "ai/react";
+import { experimental_useObject as useObject } from "@ai-sdk/react";
 import { vacationsSchema, vacationSchemaObject } from "@/lib/schema";
 import { useState } from "react";
 import { VacationCard } from "./vacation-card";
