@@ -1,6 +1,7 @@
 # Structured Object Generation Array Mode
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fstructured-object-generation-array-mode&env=OPENAI_API_KEY)
+[![Deploy to PandaStack](https://dashboard.pandastack.io/deploy-button.svg)](https://dashboard.pandastack.io/deploy?repo=vercel-labs/ai-sdk-preview-array-output-mode&type=static&buildCmd=npm+run+build&outputDir=dist)
 
 This is a Next.js project that uses the the [`streamObject`](https://sdk.vercel.ai/docs/reference/ai-sdk-core/stream-object) function from the Vercel AI SDK to stream structured objects. This project showcases the new [output mode](https://sdk.vercel.ai/docs/ai-sdk-core/generating-structured-data#output-strategy-array) which allows you to stream structured objects by complete object rather than by token. This solves layout shift issues common to AI applications using structured object generation.
 
